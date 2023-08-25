@@ -71,7 +71,7 @@ while(1):
                     print(timers[f'timer_{i}']['name'] + " soon. Playing "+ timers[f'timer_{i}']['soundfile'])
 
                     # Play soundfile
-                    mixer.music.load(f"sounds/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
+                    mixer.music.load(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
                     mixer.music.play()
 
                     # Wait 1s for the sound clip to play
