@@ -1,0 +1,33 @@
+total_timers: 5
+timer_1:
+  name: "bountyRunes"
+  start: "0:00"
+  next_in_seconds: 180
+  occurrence: -1
+  soundfile: bounty-rune.mp3
+timer_2:
+  name: "waterRunes"
+  start: "2:00"
+  next_in_seconds: 120
+  occurrence: 2
+  soundfile: water-rune.mp3
+timer_3:
+  name: "powerRunes"
+  start: "6:00"
+  next_in_seconds: 120
+  occurrence: -1
+  soundfile: power-rune.mp3
+timer_4:
+  name: "xpRunes"
+  start: "7:00"
+  next_in_seconds: 420
+  occurrence: -1
+  soundfile: bounty-rune2.mp3
+timer_5:
+  name: "LotusPools"
+  start: "3:00"
+  next_in_seconds: 180
+  occurrence: -1
+  soundfile: lotus-pool.mp3
+call_before: 15
+voice_pack: 3
