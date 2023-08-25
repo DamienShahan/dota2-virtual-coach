@@ -3,7 +3,7 @@ from PIL import Image, ImageGrab
 from pytesseract import pytesseract
 from pygame import mixer
 import yaml
-from time import gmtime, strftime
+import time
 
 # screen resolution
 screenWidth, screenHeight = pyautogui.size()
