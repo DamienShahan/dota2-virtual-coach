@@ -9,7 +9,7 @@ import time
 screenWidth, screenHeight = pyautogui.size()
 
 # Timers
-with open("timers.yaml", "r") as yamlfile:
+with open("resources/timers.yaml", "r") as yamlfile:
     timers = yaml.safe_load(yamlfile)
 
 def readIngameClock():
