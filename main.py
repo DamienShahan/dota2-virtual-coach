@@ -2,7 +2,6 @@ import pyautogui
 from PIL import Image, ImageGrab
 from pytesseract import pytesseract
 from playsound import playsound
-#from pygame import mixer
 import yaml
 import time
 
@@ -22,12 +21,6 @@ def readIngameClock():
     path_to_tesseract = r'Tesseract-OCR\tesseract.exe'
     pytesseract.tesseract_cmd = path_to_tesseract
 
-    # Define path to image
-    #path_to_image = 'current_time.png'
-
-    # Open image with PIL
-    #img = Image.open(path_to_image)
-
     # Extract text from image
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
     current_time = text.replace(" ","").replace("\n","")
@@ -40,10 +33,6 @@ def get_seconds(time_str):
     """Get seconds from time."""
     m, s = time_str.split(':')
     return int(m) * 60 + int(s)
-
-
-# Initialize music outputer
-#mixer.init()
 
 while(1):
     # Get the current ingame time
@@ -72,12 +61,7 @@ while(1):
                     print(timers[f'timer_{i}']['name'] + " soon. Playing "+ timers[f'timer_{i}']['soundfile'])
 
                     # Play soundfile
-                    #mixer.music.load(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
                     playsound(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
-                    #mixer.music.play()
-
-                    # Wait 1s for the sound clip to play
-                    #time.sleep(1)
     
     # Wait 0.5s before checking again
     time.sleep(0.5)
