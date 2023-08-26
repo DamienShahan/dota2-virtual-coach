@@ -1,7 +1,8 @@
 import pyautogui
 from PIL import Image, ImageGrab
 from pytesseract import pytesseract
-from pygame import mixer
+from playsound import playsound
+#from pygame import mixer
 import yaml
 import time
 
@@ -18,7 +19,7 @@ def readIngameClock():
     #screenshot.save("S:\Programming\Projects\dota2-virtual-coach\current_time.png", 'PNG')  # Equivalent to `screenshot.save(filepath, format='PNG')`
 
     # Define path to tessaract.exe and Point tessaract_cmd to tessaract.exe
-    path_to_tesseract = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    path_to_tesseract = r'Tesseract-OCR\tesseract.exe'
     pytesseract.tesseract_cmd = path_to_tesseract
 
     # Define path to image
@@ -42,7 +43,7 @@ def get_seconds(time_str):
 
 
 # Initialize music outputer
-mixer.init()
+#mixer.init()
 
 while(1):
     # Get the current ingame time
@@ -71,11 +72,12 @@ while(1):
                     print(timers[f'timer_{i}']['name'] + " soon. Playing "+ timers[f'timer_{i}']['soundfile'])
 
                     # Play soundfile
-                    mixer.music.load(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
-                    mixer.music.play()
+                    #mixer.music.load(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
+                    playsound(f"resources/{timers[f'voice_pack']}/{timers[f'timer_{i}']['soundfile']}")
+                    #mixer.music.play()
 
                     # Wait 1s for the sound clip to play
-                    time.sleep(1)
+                    #time.sleep(1)
     
     # Wait 0.5s before checking again
     time.sleep(0.5)
