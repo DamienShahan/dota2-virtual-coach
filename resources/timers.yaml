@@ -22,7 +22,7 @@ timer_4:
   start: "7:00"
   next_in_seconds: 420
   occurrence: -1
-  soundfile: bounty-rune2.mp3
+  soundfile: xp-rune.mp3
 timer_5:
   name: "LotusPools"
   start: "3:00"
