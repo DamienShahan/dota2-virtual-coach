@@ -19,7 +19,7 @@ def readIngameClock():
     #screenshot.save("screenshot.png", 'PNG')
 
     # Image Optimizations
-    # maybe in the future
+    #maybe in the future
 
     # Define path to tessaract.exe and Point tessaract_cmd to tessaract.exe
     path_to_tesseract = r'Tesseract-OCR\tesseract.exe'
@@ -29,7 +29,7 @@ def readIngameClock():
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
     
     # Remove incorrect characters
-    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","")
+    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","").replace("*","").replace("°","")
     current_time = re.sub('[a-zA-Z]','',current_time)
 
     # Check if colon (:) is missing, and add it if it is
@@ -38,6 +38,9 @@ def readIngameClock():
             current_time = current_time[:1] + ":" + current_time[1:]
         elif len(current_time) == 4:
             current_time = current_time[:2] + ":" + current_time[2:]
+
+    # Check if there are to many numbers. Remove the assume the very first ones are incorrect and remove them
+    #coming in the future
 
     # Output the current time
     return current_time
