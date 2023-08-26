@@ -27,8 +27,17 @@ def readIngameClock():
 
     # Extract text from image
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
+    
+    # Remove incorrect characters
     current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","")
     current_time = re.sub('[a-zA-Z]','',current_time)
+
+    # Check if colon (:) is missing, and add it if it is
+    if ":" not in current_time:
+        if len(current_time) == 3:
+            current_time = current_time[:1] + ":" + current_time[1:]
+        elif len(current_time) == 4:
+            current_time = current_time[:2] + ":" + current_time[2:]
 
     # Output the current time
     return current_time
