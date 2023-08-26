@@ -4,6 +4,7 @@ from pytesseract import pytesseract
 from playsound import playsound
 import yaml
 import time
+import re
 
 # screen resolution
 screenWidth, screenHeight = pyautogui.size()
@@ -15,7 +16,10 @@ with open("resources/timers.yaml", "r") as yamlfile:
 def readIngameClock():
     # screenshot creation
     screenshot = ImageGrab.grab(bbox=(screenWidth/2 - 50, 20, screenWidth/2 + 50, 50))
-    #screenshot.save("S:\Programming\Projects\dota2-virtual-coach\current_time.png", 'PNG')  # Equivalent to `screenshot.save(filepath, format='PNG')`
+    #screenshot.save("screenshot.png", 'PNG')
+
+    # Image Optimizations
+    # maybe in the future
 
     # Define path to tessaract.exe and Point tessaract_cmd to tessaract.exe
     path_to_tesseract = r'Tesseract-OCR\tesseract.exe'
@@ -23,8 +27,9 @@ def readIngameClock():
 
     # Extract text from image
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
-    current_time = text.replace(" ","").replace("\n","")
-    
+    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","")
+    current_time = re.sub('[a-zA-Z]','',current_time)
+
     # Output the current time
     return current_time
 
