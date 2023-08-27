@@ -25,7 +25,8 @@ There are 3 voice pack options.
 2. Male: (link to preview coming soon)
 3. Female: (link to preview coming soon)
 
-By default the 3. pack (female) is used. You can change this by changing the number in resource/timers.yaml on line 33: voice_pack.
+By default the 3. pack (female) is used. You can change this by changing the number in resource/timers.yaml on line 33: voice_pack.\
+  ![main.exe](https://i.imgur.com/ugzbQ6p.png)
 
 # Customizable settings
 All timer settings can be found and changed or updated in resource/timers.yaml.\
