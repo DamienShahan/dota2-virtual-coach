@@ -52,5 +52,5 @@ All timer settings can be found and changed or updated in resource/timers.yaml.\
 * Initial release
 
 # Donations
-* Any donations are greatly appreciated: https://www.paypal.com/donate/?hosted_button_id=G3GRAKMYJGEMC
+* Any donations are greatly appreciated: https://www.paypal.com/donate/?hosted_button_id=KA7EN3NAXJ3U8
 * I hope you have fun with the Dota 2 virtual coach
