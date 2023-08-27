@@ -3,9 +3,9 @@ A virtual coach, helping you keep an eye on things, for example calling out 15 s
   ![main.exe](https://i.imgur.com/DxdFDqO.png)
 
 # Download and usage guide
-* Click at latest release:\
-  ![latest release](https://i.imgur.com/2QW7b3y.jpg)
-* Download and extract main.zip. The extracted folder is about 432.mb 
+* Click on the latest release:\
+  ![latest release](https://i.imgur.com/CXmSXY7.png)
+* Download and extract dota2-virtual-coach.zip. The extracted folder is about 432.mb 
 * Then run the file main.exe. A console window will open, just go back into the game.\
   ![main.exe](https://i.imgur.com/7BSqpjj.png)
 * In the console, the script with write the current ingame time. Additionally, it will output a short message, if it is time to call out that an event is about to happen and play the associated .mp3 file.\
@@ -27,8 +27,9 @@ There are 3 voice pack options.
 
 By default the 3. pack (female) is used. You can change this by changing the number in resource/timers.yaml on line 33: voice_pack.
 
-# Timer settings
-All timer settings can be found and changed or updated in resource/timers.yaml.
+# Customizable settings
+All timer settings can be found and changed or updated in resource/timers.yaml.\
+  ![main.exe](https://i.imgur.com/X3GHrAq.png)
 
 # Supported resolutions
 * 2k (1440p)
