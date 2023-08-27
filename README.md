@@ -47,9 +47,9 @@ All timer settings can be found and changed or updated in resource/timers.yaml.\
 
 # Changelog
 ## v1.1
-* imporved post processing of the OCR output
+* Imporved the post processing of the OCR output
 ## v1.0
-* initial release
+* Initial release
 
 # Donations
 * Any donations are greatly appreciated: https://www.paypal.com/donate/?hosted_button_id=G3GRAKMYJGEMC
