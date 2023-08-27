@@ -21,9 +21,9 @@ A virtual coach, helping you keep an eye on things, for example calling out 15 s
 
 # Voice pack options
 There are 3 voice pack options.
-1. Female: (link to preview coming soon)
-2. Male: (link to preview coming soon)
-3. Female: (link to preview coming soon)
+1. Jenny: https://www.youtube.com/watch?v=qpzR8yDuHCE
+2. Davis: https://www.youtube.com/watch?v=wxzASiHeOT0
+3. Sonia: https://www.youtube.com/watch?v=2y4L1b40NCs
 
 By default the 3. pack (female) is used. You can change this by changing the number in resource/timers.yaml on line 33: voice_pack.\
   ![main.exe](https://i.imgur.com/ugzbQ6p.png)
