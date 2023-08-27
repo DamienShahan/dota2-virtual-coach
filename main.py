@@ -29,7 +29,7 @@ def readIngameClock():
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
     
     # Remove incorrect characters
-    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","").replace("*","").replace("°","")
+    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","").replace("*","").replace("°","").replace("(","").replace(")","").replace("!","").replace("/","").replace("»","")
     current_time = re.sub('[a-zA-Z]','',current_time)
 
     # Check if colon (:) is missing, and add it if it is
@@ -39,8 +39,13 @@ def readIngameClock():
         elif len(current_time) == 4:
             current_time = current_time[:2] + ":" + current_time[2:]
 
-    # Check if there are to many numbers. Remove the assume the very first ones are incorrect and remove them
-    #coming in the future
+    # Check if there are to many numbers
+    # Assume the very first ones are incorrect and remove them
+    if ":" in current_time:
+        m, s = current_time.split(':')
+        if len(m) > 2:
+            m = m[len(m)-2:]
+        current_time = m + ":" + s
 
     # Output the current time
     return current_time
@@ -54,16 +59,17 @@ def get_seconds(time_str):
 while(1):
     # Get the current ingame time
     current_time = readIngameClock()
-    
-    # Write current time to console
-    print(current_time)
 
     # Check if a time could be read
     try:
         x = get_seconds(current_time) 
     except:
+        print("Failed to read ingame time")
         continue
 
+    # Write current time to console
+    print(current_time)
+    
     # Check if any timers match
     for i in range(1, timers["total_timers"]+1):
         # Skip callouts at 0
