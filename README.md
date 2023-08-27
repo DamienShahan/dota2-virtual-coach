@@ -1,6 +1,6 @@
 # Dota 2 Virtual Coach release 1.1
 A virtual coach, helping you keep an eye on things, for example calling out 15 second before a rune will spawn.\
-  ![main.exe](https://i.imgur.com/DxdFDqO.png)
+  ![main.exe](https://i.imgur.com/XErjOjz.png)
  
 Release changelog found here: https://github.com/DamienShahan/dota2-virtual-coach#Changelog
 
@@ -11,7 +11,7 @@ Release changelog found here: https://github.com/DamienShahan/dota2-virtual-coac
 * Then run the file main.exe. A console window will open, just go back into the game.\
   ![main.exe](https://i.imgur.com/7BSqpjj.png)
 * In the console, the script with write the current ingame time. Additionally, it will output a short message, if it is time to call out that an event is about to happen and play the associated .mp3 file.\
-  ![main.exe](https://i.imgur.com/DxdFDqO.png)
+  ![main.exe](https://i.imgur.com/XErjOjz.png)
 * To stop the script, just close the opened console window.
 
 # Events being called out
