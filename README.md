@@ -1,6 +1,8 @@
-# Dota 2 Virtual Coach release 1.0
+# Dota 2 Virtual Coach release 1.1
 A virtual coach, helping you keep an eye on things, for example calling out 15 second before a rune will spawn.\
   ![main.exe](https://i.imgur.com/DxdFDqO.png)
+ 
+Release changelog found here: https://github.com/DamienShahan/dota2-virtual-coach#Changelog
 
 # Download and usage guide
 * Click on the latest release:\
@@ -42,6 +44,12 @@ All timer settings can be found and changed or updated in resource/timers.yaml.\
 ## Planned supported resolutions
 * HD (1080p)
 * 4k (2160p)
+
+# Changelog
+## v1.1
+* imporved post processing of the OCR output
+## v1.0
+* initial release
 
 # Donations
 * Any donations are greatly appreciated: https://www.paypal.com/donate/?hosted_button_id=G3GRAKMYJGEMC
