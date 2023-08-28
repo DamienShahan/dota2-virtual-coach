@@ -5,7 +5,7 @@ A virtual coach, helping you keep an eye on things, for example calling out 15 s
 Release changelog found here: https://github.com/DamienShahan/dota2-virtual-coach#Changelog
 
 # Download and usage guide
-* Click on the latest release:\
+* Click on the [latest release](https://github.com/DamienShahan/dota2-virtual-coach/releases):\
   ![latest release](https://i.imgur.com/CXmSXY7.png)
 * Download and extract dota2-virtual-coach.zip. The extracted folder is about 432.mb 
 * Then run the file main.exe. A console window will open, just go back into the game.\
