@@ -27,10 +27,9 @@ def readIngameClock():
 
     # Extract text from image
     text = pytesseract.image_to_string(screenshot, config='--psm 6')
-    
+
     # Remove incorrect characters
-    current_time = text.replace(" ","").replace("\n","").replace("_","").replace("—","").replace("-","").replace("~","").replace("\\","").replace(".","").replace(",","").replace(";",":").replace("#","").replace("+","").replace("*","").replace("°","").replace("(","").replace(")","").replace("!","").replace("/","").replace("»","")
-    current_time = re.sub('[a-zA-Z]','',current_time)
+    current_time = re.sub('[^0-9:]+','',text)
 
     # Check if colon (:) is missing, and add it if it is
     if ":" not in current_time:
@@ -68,7 +67,7 @@ while(1):
         continue
 
     # Write current time to console
-    print(current_time)
+    print("Ingame time: " + current_time)
     
     # Check if any timers match
     for i in range(1, timers["total_timers"]+1):
