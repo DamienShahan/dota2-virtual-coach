@@ -72,14 +72,14 @@ while(1):
     
     # Check if any timers match
     for i in range(1, timers["total_timers"]+1):
-        # Skip callouts at 0
+        # Skip callouts at 0:00
         if get_seconds(current_time) + timers["call_before"] == 0:
             continue
-        # Else not the first occurnec
+        # Not 0:00
         else:
             if (get_seconds(current_time) + timers["call_before"] - get_seconds(timers[f"timer_{i}"]["start"])) % timers[f"timer_{i}"]["next_in_seconds"] == 0:
                 # Occurence check
-                if timers[f"timer_{i}"]["occurrence"] == -1 or (get_seconds(current_time) + timers["call_before"] - get_seconds(timers[f"timer_{i}"]["start"])) / timers[f"timer_{i}"]["next_in_seconds"] <= timers[f"timer_{i}"]["occurrence"]:
+                if timers[f"timer_{i}"]["occurrence"] == -1 or (get_seconds(current_time) + timers["call_before"] - get_seconds(timers[f"timer_{i}"]["start"])) / timers[f"timer_{i}"]["next_in_seconds"] < timers[f"timer_{i}"]["occurrence"]:
                     # Write to console
                     print(timers[f'timer_{i}']['name'] + " soon. Playing "+ timers[f'timer_{i}']['soundfile'])
 
